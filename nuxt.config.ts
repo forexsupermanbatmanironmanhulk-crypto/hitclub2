@@ -1,10 +1,10 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/main.css', '~/assets/css/casino-theme.css'],
   app: {
     head: {
-      title: 'Lumen Play — Demo Coin',
-      meta: [{ name: 'description', content: 'Nền tảng game giải trí dùng demo coin.' }]
+      title: 'HIT CLUB',
+      meta: [{ name: 'description', content: 'HIT CLUB — Nền tảng game giải trí trực tuyến.' }]
     }
   },
   runtimeConfig: {

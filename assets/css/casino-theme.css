@@ -1,0 +1,231 @@
+:root {
+  --ink: #f8e7b2;
+  --paper: #100904;
+  --line: #80601f;
+  --lime: #ffd34e;
+  --purple: #f0a300;
+  --muted: #c4a976;
+  --gold: #d4a017;
+  --gold-light: #ffe082;
+  --gold-glow: #ffd700;
+  --bg-deep: #100904;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-deep) url('/assets/lumen-lobby-bg.png') center top / cover fixed;
+  color: var(--ink);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg, #10070266 0%, #100602bc 70%, #080401 100%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Internal nav (wallet/admin) */
+.nav {
+  height: 72px;
+  background: linear-gradient(180deg, #5c3b12, #150b03 65%, #6b4517);
+  border-top: 2px solid #c8962c;
+  border-bottom: 2px solid #d8a738;
+  box-shadow: 0 5px 18px #0008;
+  padding: 0 max(28px, calc((100vw - 1200px) / 2));
+}
+
+.brand {
+  color: #fff2bd;
+  font-size: 22px;
+  font-weight: 900;
+  text-shadow: 0 2px 0 #6b3400, 0 0 14px #ffd951;
+}
+
+.brand span,
+.brand i {
+  color: #ffbc1f;
+}
+
+.nav button,
+.text-btn {
+  color: #f8d981;
+  font-weight: 800;
+}
+
+.nav nav button {
+  border: 1px solid #966d20;
+  padding: 8px 15px;
+  border-radius: 999px;
+  background: linear-gradient(#6e4818, #251402);
+}
+
+.nav nav button.active {
+  background: linear-gradient(#b88628, #4b2c06);
+  color: #fff9d4;
+  text-shadow: 0 0 10px #ffd349;
+}
+
+.balance {
+  background: linear-gradient(#271805, #070504);
+  border: 1px solid #c79426;
+  color: #ffdf7a;
+  box-shadow: inset 0 0 10px #000;
+}
+
+.avatar {
+  background: linear-gradient(#f6c33b, #694000);
+  border: 1px solid #ffe07a;
+  color: #210e00;
+}
+
+.primary {
+  background: linear-gradient(#dca62f, #6d3e00);
+  border: 1px solid #ffe294;
+  color: #fff9da;
+  box-shadow: inset 0 1px 0 #fff3b7, 0 3px 0 #301502;
+  text-transform: uppercase;
+  text-shadow: 0 1px #3a1a00;
+}
+
+.ghost {
+  border: 1px solid #d6a53a;
+  color: #ffda71;
+  background: #21100399;
+}
+
+/* Wallet / Admin panels */
+.wallet-page,
+.admin-page {
+  background: #120903cc;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-title h1 {
+  color: #ffe2a0;
+}
+
+.coin-card,
+.wallet-menu,
+.wallet-panel,
+.history,
+.admin-card {
+  background: linear-gradient(145deg, #2d1706, #090402);
+  border-color: #a97920;
+  box-shadow: inset 0 0 16px #d19a2330, 0 5px 16px #0009;
+}
+
+.wallet-menu button.active {
+  background: linear-gradient(90deg, #b27b19, #3d2005);
+  color: #fff0b5;
+}
+
+.payment-demo {
+  background: #150a02;
+  border: 1px solid #7f5416;
+}
+
+.qr {
+  background: #eadcae;
+}
+
+.method-switch button {
+  border-color: #805c1d;
+  color: #f6da96;
+  background: #1b0d02;
+}
+
+.method-switch button.active {
+  background: #4c2d05;
+  border-color: #e0ac34;
+}
+
+.input-label input,
+.admin-card input {
+  background: #160b03;
+  border-color: #a4731d;
+  color: #fff0c0;
+}
+
+.quick button {
+  border-color: #805c1d;
+  color: #f6da96;
+  background: #1b0d02;
+}
+
+.history-row,
+.request-row {
+  border-color: #68481a;
+}
+
+.modal-backdrop {
+  background: #050200d9;
+  backdrop-filter: blur(4px);
+}
+
+.game-modal {
+  background: radial-gradient(circle at 50% 0, #6a410b, #130802 48%, #050301);
+  border-color: #e2b23e;
+  box-shadow: inset 0 0 20px #ffd55d55, 0 0 0 4px #281402, 0 15px 40px #000;
+}
+
+.game-modal h2 {
+  color: #ffe69e;
+  text-align: center;
+  text-shadow: 0 2px #4e2100;
+}
+
+.game-modal .close {
+  color: #ffe168;
+  background: #641800;
+  border: 1px solid #ffd357;
+}
+
+.toast {
+  background: linear-gradient(#8b5510, #241001);
+  border: 1px solid #ffda6b;
+  color: #fff3c3;
+}
+
+.sicbo-board h2,
+.result-name {
+  color: #ffdf79;
+}
+
+.countdown {
+  background: #2c1603;
+  border-color: #edb83f;
+  color: #ffe699;
+  box-shadow: 0 0 20px #e7a11b55;
+}
+
+.countdown.revealed {
+  background: #7f1804;
+  color: #ffe7a0;
+  border-color: #f2b343;
+}
+
+.dice b {
+  background: linear-gradient(#fff6db, #d0af70);
+  color: #351600;
+  border: 1px solid #ffd77a;
+}
+
+.sicbo-bets button {
+  background: linear-gradient(#a62716, #3e0802);
+  color: #ffe9a5;
+  border: 1px solid #f1b442;
+}
+
+.sicbo-bets button:last-child {
+  background: linear-gradient(#21699a, #092238);
+  color: #edf9ff;
+  border-color: #71cbff;
+}
+
+footer {
+  border-color: #835a17;
+  color: #d5b778;
+}
