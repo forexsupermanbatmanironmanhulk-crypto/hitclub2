@@ -1,0 +1,25 @@
+{
+  "name": "lumen-play-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "preview": "nuxt preview",
+    "worker:dev": "wrangler dev --config apps/worker/wrangler.jsonc",
+    "worker:deploy": "wrangler deploy --config apps/worker/wrangler.jsonc",
+    "d1:migrate:local": "wrangler d1 migrations apply lumen-play --local --config apps/worker/wrangler.jsonc",
+    "d1:migrate:remote": "wrangler d1 migrations apply lumen-play --remote --config apps/worker/wrangler.jsonc",
+    "d1:seed:local": "wrangler d1 execute lumen-play --local --file apps/worker/seed.sql --config apps/worker/wrangler.jsonc"
+  },
+  "dependencies": {
+    "@nuxtjs/google-fonts": "^3.2.0",
+    "nuxt": "^3.17.0",
+    "hono": "^4.7.7",
+    "zod": "^3.24.3"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250401.0",
+    "wrangler": "^4.15.0"
+  }
+}

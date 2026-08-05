@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "lumen-play-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-04",
+  "dev": { "port": 8787 },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "lumen-play",
+    "database_id": "REPLACE_WITH_D1_DATABASE_ID",
+    "migrations_dir": "migrations"
+  }],
+  "durable_objects": { "bindings": [{ "name": "GAME_ROOM", "class_name": "GameRoom" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["GameRoom"] }],
+  "vars": { "APP_ORIGIN": "http://localhost:3000", "DEMO_PAYMENTS_ENABLED": "true" }
+}
