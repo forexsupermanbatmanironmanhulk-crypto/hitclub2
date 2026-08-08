@@ -10,7 +10,8 @@
     "worker:deploy": "wrangler deploy --config apps/worker/wrangler.jsonc",
     "d1:migrate:local": "wrangler d1 migrations apply lumen-play --local --config apps/worker/wrangler.jsonc",
     "d1:migrate:remote": "wrangler d1 migrations apply lumen-play --remote --config apps/worker/wrangler.jsonc",
-    "d1:seed:local": "wrangler d1 execute lumen-play --local --file apps/worker/seed.sql --config apps/worker/wrangler.jsonc"
+    "d1:seed:local": "wrangler d1 execute lumen-play --local --file apps/worker/seed.sql --config apps/worker/wrangler.jsonc",
+    "d1:seed:remote": "wrangler d1 execute lumen-play --remote --file apps/worker/seed.sql --config apps/worker/wrangler.jsonc"
   },
   "dependencies": {
     "@nuxtjs/google-fonts": "^3.2.0",

@@ -13,7 +13,10 @@
 
 body {
   min-height: 100vh;
-  background: var(--bg-deep) url('/assets/lumen-lobby-bg.png') center top / cover fixed;
+  background:
+    radial-gradient(ellipse 120% 80% at 50% -20%, #3d220866 0%, transparent 55%),
+    radial-gradient(ellipse 80% 50% at 50% 100%, #2a150544 0%, transparent 50%),
+    linear-gradient(180deg, #0c0703 0%, #100904 40%, #080401 100%);
   color: var(--ink);
 }
 

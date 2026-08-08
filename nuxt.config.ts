@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  devServer: { host: 'localhost', port: 3000 },
   css: ['~/assets/css/main.css', '~/assets/css/casino-theme.css'],
   app: {
     head: {

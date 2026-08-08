@@ -3,14 +3,26 @@
   "name": "lumen-play-api",
   "main": "src/index.ts",
   "compatibility_date": "2026-08-04",
+  "workers_dev": true,
+  "preview_urls": false,
   "dev": { "port": 8787 },
-  "d1_databases": [{
-    "binding": "DB",
-    "database_name": "lumen-play",
-    "database_id": "REPLACE_WITH_D1_DATABASE_ID",
-    "migrations_dir": "migrations"
-  }],
-  "durable_objects": { "bindings": [{ "name": "GAME_ROOM", "class_name": "GameRoom" }] },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "lumen-play",
+      "database_id": "f09df940-6708-4760-a32a-3122ed572934",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "durable_objects": {
+    "bindings": [{ "name": "GAME_ROOM", "class_name": "GameRoom" }]
+  },
+  "r2_buckets": [
+    { "binding": "ASSETS", "bucket_name": "hitclub-assets" }
+  ],
   "migrations": [{ "tag": "v1", "new_sqlite_classes": ["GameRoom"] }],
-  "vars": { "APP_ORIGIN": "http://localhost:3000", "DEMO_PAYMENTS_ENABLED": "true" }
+  "vars": {
+    "APP_ORIGIN": "http://localhost:3000",
+    "DEMO_PAYMENTS_ENABLED": "true"
+  }
 }
